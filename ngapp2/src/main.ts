@@ -6,12 +6,36 @@
 // platformBrowserDynamic().bootstrapModule(AppModule)
 //   .catch(err => console.error(err));
 
+class Product {
+    constructor(public name: string, public price: number, public category?: string) {
+    // this.name = name;
+    // this.price = price;
+    // this.category = category;
+    }
+    // name: string
+    // price: number
+    // category?: string
+    }
 
-//   console.log("Hello");
+
+    let hat = new Product("Hat", 100);
+    let boots = new Product("Boots", 100, "Snow Gear");
+    function printDetails(product : { name: string, price: number, category?: string}) {
+    
+        if (product.category != undefined) {
+    console.log(`Name: ${product.name}, Price: ${product.price}, ` +
+    `Category: ${product.category}`);
+    } else {
+    console.log(`Name: ${product.name}, Price: ${product.price}`);
+    }
+    }
+
+    class DiscountProduct extends Product {
+        constructor(name: string, price: number, private discount: number) {
+        super(name, price - discount);
+        }
+        }
 
 
-let condition: boolean = true;
-let person: string = "Bob";
-const age: number = 40;
-
-console.log(condition)
+    printDetails(hat);
+    printDetails(boots);

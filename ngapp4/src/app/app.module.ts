@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
-    AppComponent
-    
+    AppComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

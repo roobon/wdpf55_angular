@@ -1,0 +1,23 @@
+<div *ngIf="error">{{error}}</div>
+<div *ngIf="success">{{success}}</div>
+    
+<div id="theList">
+  <h2>The list</h2>
+  <ul>
+    <li *ngFor="let item of cars">{{item.model}} | {{item.price}} | {{item.id}} </li>
+  </ul>
+
+
+  <table class="table table-striped" border="1">
+    <tr>
+      <th>ID</th>
+      <th>Model</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let item of cars">
+      <td> {{item.id}} </td>
+      <td> {{item.model}} </td>
+      <td> {{item.price}} </td>
+    </tr>
+  </table>
+</div>
